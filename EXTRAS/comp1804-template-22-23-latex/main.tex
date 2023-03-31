@@ -1,0 +1,131 @@
+\documentclass[12pt, a4paper]{article}
+
+
+% A pretty common set of packages
+\usepackage[top=3cm, bottom=3cm, left = 2cm, right = 2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,booktabs}
+\usepackage{color}
+\usepackage[english]{babel}
+\usepackage[round,authoryear]{natbib}
+\bibliographystyle{abbrvnat}
+\usepackage[colorlinks=true, 
+    linkcolor=blue,          % color of internal links
+    citecolor=blue,        % color of links to bibliography
+    urlcolor=blue]{hyperref}
+
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tableref}[1]{Table~\ref{#1}}
+\newcommand{\secref}[1]{Section \ref{#1}}
+
+\title{Comp1804 report: Title}
+\author{ENTER YOUR STUDENT ID ONLY }
+\date{\today{}}
+
+\begin{document}
+
+\maketitle
+
+Word count: ADD WORD COUNT   
+
+\vspace{.2in}
+Notes (delete these notes from final report!): 
+\begin{itemize}
+\item The title should be either ``Predicting the severity of road accidents in the UK'' or ``Predicting the topic of customers’ banking questions'' depending on the option you chose. Do not use sub-titles.
+\item If you use abbreviations, define them.
+\item For how to include references, check out this \href{https://www.overleaf.com/learn/latex/Natbib_citation_styles}{overleaf tutorial}.
+\end{itemize}
+
+\vspace{0.2in}
+
+
+\section*{Executive summary}
+Briefly summarize what the report contains. That is: the task you are solving and why it is important; the outline of the ML methods you implemented and any experiments performed; the summary of your results and your conclusions. The executive summary should be between 100 and 200 words.
+
+\section{Exploratory data analysis}
+Describe the exploratory data analysis performed and comment on what its implications are for the machine learning task. As part of the exploratory data analysis, you should use dimensionality reduction techniques to show the dataset (including the target labels) in a 2-dimensional plot.
+
+\section{Data pre-processing}
+Describe the steps performed for data cleaning, splitting (training/validation/test) and pre-processing (where appropriate: normalization/standardization, imputation of missing values, feature encoding, over/under-sampling, text processing). Provide justifications, based on theory and/or experiments, for your design choices.
+
+\section{Classification using traditional machine learning}
+Describe your solution to the classification task (accident severity for option 1 and question topic for option 2) using traditional machine learning techniques. You should describe the final model hyper-parameters in details, ideally in a table, and give a brief explanation of how the algorithm works. 
+Describe the experiments you did to optimize your model (hyper-parameters optimization and comparison with other models) – these experiment should be rigorous and follow best practice. Provide justifications, based on theory and/or experiments, for your design choices.
+Evaluate the model performance using a) a confusion matrix; b) two performance metrics (explain what each metric compute, why it is an appropriate metric to use and what are the implications of the results for the task you are solving); c) a comparison with one “trivial” baseline (for example, random guess or majority class). 
+Results should be presented in well-formatted figures and tables.
+
+Here's some help on how to insert figures, tables and equations.
+
+\subsection{figures}
+Use this to insert a figure in latex, which can be referenced using \figref{examplefig}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.2in]{example_figure.png}
+\caption{In your captions, please include a brief description of what is in the figure and what the reader should focus on when looking at it.}
+\label{examplefig}
+\end{figure}
+
+\subsection{tables}
+Use this to insert a table in latex, which can be referenced using \tableref{exampletab}.
+
+\begin{table}[htp]
+\centering
+\begin{tabular}{c c c c} 
+ \hline
+ Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+ \hline\hline
+ 1 & 6 & 87837 & 787 \\ 
+ 2 & 7 & 78 & 5415 \\
+ \hline
+\end{tabular}
+\caption{In you table captions, please include a brief description of what is in the table and what the reader should focus on when looking at it. Don't forget to appropriately label columns and rows.}
+\label{exampletab}
+\end{table}
+
+\subsection{equations}
+Here is an example of how to insert equations (Equation \eqref{exampleeq}):
+\begin{equation}
+a+b=\gamma\label{eq}
+\label{exampleeq}
+\end{equation}
+
+\section{Classification using neural networks}
+Describe your solution to the classification task (accident severity for option 1 and question topic for option 2) using neural networks. You should describe the final model hyper-parameters in details, ideally in a table, and give a brief explanation of how the algorithm works. 
+Describe the experiments you did to optimize your model (hyper-parameters optimization and comparison with other neural networks) – these experiment should be rigorous and follow best practice. Provide justifications, based on theory and/or experiments, for your design choices.
+Evaluate the model performance using a) a confusion matrix; b) two performance metrics (explain what are the implications of the results for the task you are solving); c) a comparison with one “trivial” baseline (for example, random guess or majority class). Unless you are using performance metrics that are different from the previous section, you do not need to explain again what each metric computes. However, you should compare the results with those from the previous section.
+Results should be presented in well-formatted figures and tables.
+
+\section{Ethical discussion}
+Identify and discuss some of the social and ethical implications of your chosen task, from data collection and processing to the ML prediction. It is highly recommended that you structure the discussion using either Data Hazard Labels or the Ethical OS Toolkit. The discussion should take into account communities and people that may be affected by the ML system.
+
+\section{Recommendations}
+You should provide three bullet points detailing the following:
+\begin{itemize}
+    \item Which of your machine learning model is the best candidate for the task and why. 
+    \item Whether the final model is good enough to be used in practice and why (or why not).
+    \item Your top suggestion for future improvements and why.
+\end{itemize}
+
+\section{Retrospective}
+The last section in the report is a reflection on the work you have done for this coursework. You should write a maximum of 50 words answering the following question: if you were to start the coursework all over again, what aspect of it would you want to investigate more in depth and why?
+
+
+
+
+
+\bibliography{References}
+
+\vspace{.1
+in}
+If needed, cite references and sources used at the end (e.g. \citep{example23} or \citet{example23}). These can be academic papers, blogs, code repositories, and more. Remember to give credit if someone else’s work has helped you complete your coursework.
+
+
+
+\end{document}
+
+
+
+
